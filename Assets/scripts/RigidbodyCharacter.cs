@@ -38,15 +38,16 @@ public class RigidbodyCharacter : MonoBehaviour
 		{
 			_body.AddForce(Vector3.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
 		}
-		if (Input.GetButtonDown("Dash"))
-		{
-			Vector3 dashVelocity = Vector3.Scale(transform.forward, DashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * _body.drag + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * _body.drag + 1)) / -Time.deltaTime)));
-			_body.AddForce(dashVelocity, ForceMode.VelocityChange);
-		}
-	}
+        //if (Input.GetButtonDown("Dash"))
+		//{
+		//	Vector3 dashVelocity = Vector3.Scale(transform.forward, DashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * _body.drag + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * _body.drag + 1)) / -Time.deltaTime)));
+		//	_body.AddForce(dashVelocity, ForceMode.VelocityChange);
+		//}
+
+    }
 
 
-	void FixedUpdate()
+    void FixedUpdate()
 	{
 		_body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
 	}
