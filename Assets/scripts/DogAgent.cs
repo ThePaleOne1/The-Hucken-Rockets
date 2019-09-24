@@ -14,6 +14,8 @@ public class DogAgent : MonoBehaviour
     //NavMesh Agent reference (fundemental to the AI system)
     NavMeshAgent dogAgent;
 
+
+
     [SerializeField]
     private float detectionRange = 3f;
 
@@ -27,9 +29,11 @@ public class DogAgent : MonoBehaviour
     
     void Update()
     {
+ 
 
-        if (foundTarget)//whatever triggure we want
+        if (Player.GetComponent<SoundGenerator>().soundDetection)//whatever triggure we want
         {
+            target = Player.GetComponent<SoundGenerator>().collidedObject;
             dogAgent.destination = target.transform.position; //walk towards position
         }
 
