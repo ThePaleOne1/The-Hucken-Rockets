@@ -16,6 +16,8 @@ public class RigidbodyCharacter : MonoBehaviour
 	public bool _isGrounded = true;
 	public Transform _groundChecker;
 
+    public bool isClimbing = false;
+
 	void Start()
 	{
 		_body = GetComponent<Rigidbody>();
@@ -24,6 +26,9 @@ public class RigidbodyCharacter : MonoBehaviour
 
 	void Update()
 	{
+        //print("Climbing: " + isClimbing);
+
+
 		_isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
 
 
