@@ -18,6 +18,9 @@ public class RigidbodyCharacter : MonoBehaviour
 
     public bool isClimbing = false;
 
+    
+
+
 	void Start()
 	{
 		_body = GetComponent<Rigidbody>();
