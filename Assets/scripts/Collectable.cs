@@ -19,7 +19,7 @@ public class Collectable : MonoBehaviour
     void Update()
     {
         colectOrder[collectableCount].active = true;
-        
+        colectOrder[collectableCount].
     }
 
     private void OnCollisionEnter(Collision col)
