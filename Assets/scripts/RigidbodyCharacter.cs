@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class RigidbodyCharacter : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class RigidbodyCharacter : MonoBehaviour
 	void Start()
 	{
 		_body = GetComponent<Rigidbody>();
-		_groundChecker = transform.GetChild(0);
+		
 	}
 
 	void Update()
@@ -32,8 +33,9 @@ public class RigidbodyCharacter : MonoBehaviour
         //print("Climbing: " + isClimbing);
 
 
-		_isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
-
+        _isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
+        //_isGrounded = _groundChecker.GetComponent<NavMeshAgent>().isOnNavMesh;
+        //print(_groundChecker.GetComponent<NavMeshAgent>().isOnNavMesh);
 
 		_inputs = Vector3.zero;
 		_inputs.x = Input.GetAxis("Horizontal");

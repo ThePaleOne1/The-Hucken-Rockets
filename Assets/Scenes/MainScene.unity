@@ -4257,8 +4257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 8
-  JumpHeight: 3
-  GroundDistance: 3
+  JumpHeight: 1
+  GroundDistance: 0.5
   DashDistance: 5
   Ground:
     serializedVersion: 2
