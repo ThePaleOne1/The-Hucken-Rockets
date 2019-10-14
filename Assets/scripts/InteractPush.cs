@@ -24,7 +24,7 @@ public class InteractPush : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            anim.SetBool("fallen", true);
+            anim.SetBool("isPushed", true);
         }
     }
 }
