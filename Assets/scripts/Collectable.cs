@@ -19,7 +19,11 @@ public class Collectable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        colectOrder[collectableCount].active = true;
+        if (collectableCount > colectOrder.Length)
+        {
+            colectOrder[collectableCount].active = true;
+        }
+
 
         if (collectableCount == colectOrder.Length)
         {
