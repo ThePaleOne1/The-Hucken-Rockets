@@ -29,14 +29,14 @@ public class DogAgent : MonoBehaviour
     
     void Update()
     {
- 
+        print(Vector3.Distance(transform.position, Player.transform.position));
 
-        if (Player.GetComponent<SoundGenerator>().soundDetection)//whatever triggure we want
-        {
-            target = Player.GetComponent<SoundGenerator>().collidedObject;
-            dogAgent.destination = target.transform.position; //walk towards position
-        }
-
+        //if (Player.GetComponent<SoundGenerator>().soundDetection)//whatever triggure we want
+        //{
+        //    target = Player.GetComponent<SoundGenerator>().collidedObject;
+        //    dogAgent.destination = target.transform.position; //walk towards position
+        //}
+        
         if (Vector3.Distance(transform.position, Player.transform.position) < detectionRange)
         {
             dogAgent.destination = Player.transform.position; //walk towards the player specifically
