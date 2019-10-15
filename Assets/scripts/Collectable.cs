@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Collectable : MonoBehaviour
 {
+    public GameObject cat;
     public Text collectableCountText;
     int collectableCount = 0;
     public GameObject[] colectOrder;
@@ -19,7 +20,15 @@ public class Collectable : MonoBehaviour
     void Update()
     {
         colectOrder[collectableCount].active = true;
-        //colectOrder[collectableCount].
+
+        if (collectableCount == colectOrder.Length)
+        {
+            cat.GetComponent<CatAgent>().isCatChasing = true;
+        }
+        else
+        {
+            cat.GetComponent<CatAgent>().isCatChasing = false;
+        }
     }
 
     private void OnCollisionEnter(Collision col)

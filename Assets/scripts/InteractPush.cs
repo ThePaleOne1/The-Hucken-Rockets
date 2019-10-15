@@ -26,5 +26,12 @@ public class InteractPush : MonoBehaviour
         {
             anim.SetBool("isPushed", true);
         }
+        
     }
+
+
+
+
+
+
 }
