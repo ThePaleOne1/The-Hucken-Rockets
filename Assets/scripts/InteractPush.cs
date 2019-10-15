@@ -5,6 +5,8 @@ using UnityEngine;
 public class InteractPush : MonoBehaviour
 {
     public Animator anim;
+    public AudioSource audio;
+    public AudioClip chairPush; 
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class InteractPush : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             anim.SetBool("isPushed", true);
+            audio.PlayOneShot(chairPush);
         }
         
     }
