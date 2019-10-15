@@ -114,9 +114,9 @@ public class MainMenuManager : MonoBehaviour
     }
 
     //link to the "exit" button, will close game when pressed.
-    public void QuitGame()
-    {
-        Application.Quit();
-        Debug.Log("quit game");
-    }
+    //public void QuitGame()
+    //{
+    //    Application.Quit();
+    //    Debug.Log("quit game");
+    //}   Check 'QuitMainMenu' script for new Application.Quit();.
 }
