@@ -5,11 +5,14 @@ using UnityEngine;
 public class MainCamSwitch : MonoBehaviour
 {
     public GameObject maincam;
+    public GameObject CutsceneCam;
     public float delay;
+    public RigidbodyCharacter pInput;
     // Start is called before the first frame update
     void Start()
     {
         Invoke("SwitchCam", delay);
+        pInput.IsInputEnabled = false;
     }
 
     // Update is called once per frame
@@ -20,7 +23,9 @@ public class MainCamSwitch : MonoBehaviour
 
     public void SwitchCam()
     {
+        pInput.IsInputEnabled = true;
         print("yeeeett");
         maincam.SetActive(true);
+        CutsceneCam.SetActive(false);
     }
 }

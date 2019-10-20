@@ -6,7 +6,8 @@ public class InteractPush : MonoBehaviour
 {
     public Animator anim;
     public AudioSource audio;
-    public AudioClip chairPush; 
+    public AudioClip chairPush;
+    //public Animator pAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +29,15 @@ public class InteractPush : MonoBehaviour
         {
             anim.SetBool("isPushed", true);
             audio.PlayOneShot(chairPush);
+            //pAnim.SetBool("Is Pushing", true);
         }
         
     }
 
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    pAnim.SetBool("Is Pushing", false);
+    //}
 
 
 

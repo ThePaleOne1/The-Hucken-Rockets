@@ -19,7 +19,7 @@ public class RigidbodyCharacter : MonoBehaviour
 
     public bool isClimbing = false;
 
-    
+    public bool IsInputEnabled = false;
 
 
 	void Start()
@@ -31,7 +31,10 @@ public class RigidbodyCharacter : MonoBehaviour
 	void Update()
 	{
         //print("Climbing: " + isClimbing);
-
+        if (!IsInputEnabled)
+        {
+            return;
+        }
 
         _isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
         //_isGrounded = _groundChecker.GetComponent<NavMeshAgent>().isOnNavMesh;
