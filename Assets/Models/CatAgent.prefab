@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7499128252730461666}
   - component: {fileID: 7499128252730461667}
   - component: {fileID: 7499128252730461664}
+  - component: {fileID: 3169709241149691769}
   - component: {fileID: 7499128252730461665}
   m_Layer: 0
   m_Name: CatAgent
@@ -150,6 +151,21 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3169709241149691769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7499128252730461670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b8af26b55019f408da46b5494e6b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  confetti: {fileID: 4305116006321446538, guid: fe252190773d41844a83c094f0181c5f,
+    type: 3}
+  deathScreen: {fileID: 0}
 --- !u!114 &7499128252730461665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,10 +187,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7499128252730461692}
     m_Modifications:
-    - target: {fileID: 100002, guid: 99c74493bf8e38f4898ddecbf36b4291, type: 3}
-      propertyPath: m_Name
-      value: CatModel
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 99c74493bf8e38f4898ddecbf36b4291, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.082316086
@@ -230,6 +242,10 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 99c74493bf8e38f4898ddecbf36b4291, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 99c74493bf8e38f4898ddecbf36b4291, type: 3}
+      propertyPath: m_Name
+      value: CatModel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99c74493bf8e38f4898ddecbf36b4291, type: 3}

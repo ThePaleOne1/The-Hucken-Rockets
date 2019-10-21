@@ -24,7 +24,7 @@ public class MainCamSwitch : MonoBehaviour
     public void SwitchCam()
     {
         pInput.IsInputEnabled = true;
-        print("yeeeett");
+        //print("yeeeett");
         maincam.SetActive(true);
         CutsceneCam.SetActive(false);
     }

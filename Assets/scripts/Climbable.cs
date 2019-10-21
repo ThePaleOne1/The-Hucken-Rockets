@@ -52,7 +52,8 @@ public class Climbable : MonoBehaviour
             other.transform.Translate(new Vector3(0, y, 0));
 
             other.GetComponent<Animator>().SetBool("Is Climbing", true);
-            //other.GetComponent<Animator>().set
+
+            
 
         }
         else
@@ -67,6 +68,7 @@ public class Climbable : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            other.GetComponent<Animator>().SetBool("Is Climbing", false);
             other.GetComponent<RigidbodyCharacter>().isClimbing = false;
             other.attachedRigidbody.useGravity = true;
         }
