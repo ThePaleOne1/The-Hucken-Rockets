@@ -9,6 +9,9 @@ public class Death : MonoBehaviour
     
     public GameObject confetti;
     public GameObject deathScreen;
+    public AudioSource aSource;
+    public AudioClip ohno;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,10 +30,18 @@ public class Death : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Destroy(other.gameObject);
+<<<<<<< HEAD
             print("kill me bitch");
             Instantiate(confetti, other.gameObject.transform.position,gameObject.transform.rotation);
 			Invoke("Return", 3);
         } 
+=======
+            //print("kill me bitch");
+            Instantiate(confetti, other.gameObject.transform.position,gameObject.transform.rotation);
+            aSource.PlayOneShot(ohno);
+        }
+            
+>>>>>>> master
     }
 
 	void Return()
