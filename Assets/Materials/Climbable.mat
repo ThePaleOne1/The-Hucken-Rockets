@@ -9,12 +9,13 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Climbable
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -86,17 +87,17 @@ Material:
     - _DistortionEnabled: 0
     - _DistortionStrength: 1
     - _DistortionStrengthScaled: 0
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EmissionEnabled: 0
     - _FlipbookMode: 0
     - _FresnelScale: 0.75
     - _GerstnerIntensity: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 1
     - _GlossyReflections: 1
     - _LightingEnabled: 0
     - _Metallic: 0
-    - _Mode: 0
+    - _Mode: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ReflDistort: 0.44
@@ -110,7 +111,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _WaveScale: 0.063
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
     - WaveSpeed: {r: 19, g: 9, b: -16, a: -7}
     - _AnimationDirection: {r: 1, g: 1, b: 1, a: 1}
@@ -119,10 +120,10 @@ Material:
     - _BumpDirection: {r: 1, g: 1, b: -1, a: 1}
     - _BumpTiling: {r: 1, g: 1, b: -2, a: 3}
     - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.8993747, g: 1, b: 0, a: 0.02745098}
+    - _Color: {r: 0.8993747, g: 1, b: 0, a: 0.105882354}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _DistortParams: {r: 1, g: 1, b: 2, a: 1.15}
-    - _EmissionColor: {r: 0, g: 0.9734455, b: 0.98225087, a: 1}
+    - _EmissionColor: {r: 0.16013889, g: 0.17331049, b: 0, a: 1}
     - _GAmplitude: {r: 0.3, g: 0.35, b: 0.25, a: 0.25}
     - _GDirectionAB: {r: 0.3, g: 0.85, b: 0.85, a: 0.25}
     - _GDirectionCD: {r: 0.1, g: 0.9, b: 0.5, a: 0.5}
