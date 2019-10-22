@@ -14,16 +14,20 @@ public class DogAgent : MonoBehaviour
     //NavMesh Agent reference (fundemental to the AI system)
     NavMeshAgent dogAgent;
 
+    public AudioClip bark;
+    AudioSource aSource;
+
 
 
     [SerializeField]
     private float detectionRange = 3f;
 
-
+    bool hasBarked = false;
     
     void Start()
     {
         dogAgent = GetComponent<NavMeshAgent>();
+        aSource = GetComponent<AudioSource>();
     }
 
     
@@ -40,7 +44,30 @@ public class DogAgent : MonoBehaviour
         if (Vector3.Distance(transform.position, Player.transform.position) < detectionRange)
         {
             dogAgent.destination = Player.transform.position; //walk towards the player specifically
+            
+
+            if (hasBarked == false)
+            {
+                hasBarked = true;
+                aSource.PlayOneShot(bark);
+                //Invoke("DoggoBark", Random.Range(3, 10));
+
+            }
+
+            
         }
 
+
+        if (Vector3.Distance(transform.position, Player.transform.position) > detectionRange)
+        {
+            hasBarked = false;
+
+
+        }
+        
+
     }
+
+
+   
 }
