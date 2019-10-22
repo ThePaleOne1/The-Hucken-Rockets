@@ -9,6 +9,12 @@ public class Collectable : MonoBehaviour
     public Text collectableCountText;
     int collectableCount = 0;
     public GameObject[] colectOrder;
+	public GameObject Scissors;
+	public GameObject ScissorsUI;
+	public GameObject Tape;
+	public GameObject TapeUI;
+	public GameObject EmptyBox;
+	public GameObject EmptyBoxUI;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +48,18 @@ public class Collectable : MonoBehaviour
             Destroy(col.gameObject); //destroy object
             ++collectableCount; //add 1 to the collectable counter
             collectableCountText.text = "Items Collected: " + collectableCount + "/3";
-        }
+			if (col.gameObject == Scissors)
+			{
+				ScissorsUI.SetActive(true);
+			}
+			if (col.gameObject == Tape)
+			{
+				TapeUI.SetActive(true);
+			}
+			if (col.gameObject == EmptyBox)
+			{
+				EmptyBoxUI.SetActive(true);
+			}
+		}
     }
 }
