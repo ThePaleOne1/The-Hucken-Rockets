@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Death : MonoBehaviour
     {
         
     }
+
     public void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag == "Player")
@@ -27,8 +29,12 @@ public class Death : MonoBehaviour
             Destroy(other.gameObject);
             print("kill me bitch");
             Instantiate(confetti, other.gameObject.transform.position,gameObject.transform.rotation);
-            
-        }
-            
+			Invoke("Return", 3);
+        } 
     }
+
+	void Return()
+	{
+		SceneManager.LoadScene("MenuScene");
+	}
 }
