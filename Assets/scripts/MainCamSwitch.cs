@@ -8,6 +8,8 @@ public class MainCamSwitch : MonoBehaviour
     public GameObject CutsceneCam;
     public float delay;
     public RigidbodyCharacter pInput;
+	public GameObject CollectibleUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +29,6 @@ public class MainCamSwitch : MonoBehaviour
         //print("yeeeett");
         maincam.SetActive(true);
         CutsceneCam.SetActive(false);
-    }
+		CollectibleUI.SetActive(true);
+	}
 }
