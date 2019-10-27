@@ -7,7 +7,7 @@ public class Collectable : MonoBehaviour
 {
     public GameObject cat;
     public Text collectableCountText;
-    int collectableCount = 0;
+    [SerializeField] int collectableCount = 0;
     public GameObject[] colectOrder;
 	public GameObject Scissors;
 	public GameObject ScissorsUI;
