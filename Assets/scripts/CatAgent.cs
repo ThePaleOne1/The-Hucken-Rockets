@@ -13,6 +13,8 @@ public class CatAgent : MonoBehaviour
     bool hasmeowed = false;
     public AudioSource aSource;
     public AudioClip meow;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class CatAgent : MonoBehaviour
 
             if (hasmeowed == false)
             {
+                
                 hasmeowed = true;
                 aSource.PlayOneShot(meow);
                 //Invoke("DoggoBark", Random.Range(3, 10));
@@ -51,6 +54,7 @@ public class CatAgent : MonoBehaviour
 
         if (Vector3.Distance(transform.position, Player.transform.position) > detectionRange)
         {
+
             hasmeowed = false;
 
 
