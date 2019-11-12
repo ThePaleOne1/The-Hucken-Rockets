@@ -9,6 +9,7 @@ public class Collectable : MonoBehaviour
     public Text collectableCountText;
     public int collectableCount = 0;
     public GameObject[] colectOrder;
+    public GameObject[] headItems;
 	public GameObject Scissors;
 	public GameObject ScissorsUI;
 	public GameObject Tape;
@@ -30,8 +31,10 @@ public class Collectable : MonoBehaviour
         //    //colectOrder[collectableCount].active = true;
         //}
 
-        colectOrder[collectableCount].SetActive(true);
-
+        if (collectableCount > colectOrder.Length)
+        {
+            colectOrder[collectableCount].SetActive(true);
+        }
 
         if (collectableCount == colectOrder.Length)
         {
@@ -41,6 +44,8 @@ public class Collectable : MonoBehaviour
         {
             cat.GetComponent<CatAgent>().isCatChasing = false;
         }
+
+         headItems[collectableCount - 1].SetActive(true);
     }
 
     private void OnCollisionEnter(Collision col)
