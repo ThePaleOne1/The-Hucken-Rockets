@@ -10,6 +10,8 @@ public class MainCamSwitch : MonoBehaviour
     public float delay;
     public RigidbodyCharacter pInput;
 
+    public GameObject textPrompt;
+
     bool isSkippable = false;
     
 	//public GameObject CollectibleUI;
@@ -20,6 +22,8 @@ public class MainCamSwitch : MonoBehaviour
         Invoke("SwitchCam", delay);
         Invoke("Skippable", 2f);
         pInput.IsInputEnabled = false;
+        //textPrompt.SetActive(false);
+        textPrompt.active = false;
     }
 
     // Update is called once per frame
@@ -34,6 +38,7 @@ public class MainCamSwitch : MonoBehaviour
     public void Skippable()
     {
         isSkippable = true;
+        textPrompt.SetActive(true);
     }
 
     public void SwitchCam()
