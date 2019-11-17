@@ -31,12 +31,12 @@ public class Collectable : MonoBehaviour
         //    //colectOrder[collectableCount].active = true;
         //}
 
-        if (collectableCount > colectOrder.Length)
-        {
+        //if (collectableCount == colectOrder.Length)
+        //{
             colectOrder[collectableCount].SetActive(true);
-        }
+        //}
 
-        if (collectableCount == colectOrder.Length)
+        if (collectableCount == colectOrder.Length - 1)
         {
             cat.GetComponent<CatAgent>().isCatChasing = true;
         }
@@ -45,8 +45,12 @@ public class Collectable : MonoBehaviour
             cat.GetComponent<CatAgent>().isCatChasing = false;
         }
 
-         headItems[collectableCount - 1].SetActive(true);
+        //if (collectableCount > 0)
+        //{
+            headItems[collectableCount - 1].SetActive(true);
+        //}
     }
+        
 
     private void OnCollisionEnter(Collision col)
     {
