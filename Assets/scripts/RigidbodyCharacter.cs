@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class RigidbodyCharacter : MonoBehaviour
 {
 
@@ -19,7 +20,7 @@ public class RigidbodyCharacter : MonoBehaviour
 
     public bool isClimbing = false;
 
-    public bool IsInputEnabled = false;
+    public bool IsInputEnabled = true;
 
 
 	void Start()

@@ -33,7 +33,7 @@ public class DogAgent : MonoBehaviour
     
     void Update()
     {
-        print(Vector3.Distance(transform.position, Player.transform.position));
+        //print(Vector3.Distance(transform.position, Player.transform.position));
 
         //if (Player.GetComponent<SoundGenerator>().soundDetection)//whatever triggure we want
         //{

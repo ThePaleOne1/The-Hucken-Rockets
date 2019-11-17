@@ -7,8 +7,9 @@ public class Collectable : MonoBehaviour
 {
     public GameObject cat;
     public Text collectableCountText;
-    [SerializeField] int collectableCount = 0;
+    public int collectableCount = 0;
     public GameObject[] colectOrder;
+    public GameObject[] headItems;
 	public GameObject Scissors;
 	public GameObject ScissorsUI;
 	public GameObject Tape;
@@ -25,13 +26,17 @@ public class Collectable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (collectableCount > colectOrder.Length)
-        {
-            colectOrder[collectableCount].active = true;
-        }
+        //if (collectableCount > colectOrder.Length)
+        //{
+        //    //colectOrder[collectableCount].active = true;
+        //}
 
+        //if (collectableCount == colectOrder.Length)
+        //{
+            colectOrder[collectableCount].SetActive(true);
+        //}
 
-        if (collectableCount == colectOrder.Length)
+        if (collectableCount == colectOrder.Length - 1)
         {
             cat.GetComponent<CatAgent>().isCatChasing = true;
         }
@@ -39,7 +44,13 @@ public class Collectable : MonoBehaviour
         {
             cat.GetComponent<CatAgent>().isCatChasing = false;
         }
+
+        //if (collectableCount > 0)
+        //{
+            headItems[collectableCount - 1].SetActive(true);
+        //}
     }
+        
 
     private void OnCollisionEnter(Collision col)
     {

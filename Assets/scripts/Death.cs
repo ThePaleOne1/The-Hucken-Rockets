@@ -32,8 +32,9 @@ public class Death : MonoBehaviour
         {
             Destroy(other.gameObject);
 
-            print("kill me bitch");
+            //print("kill me bitch");
             Instantiate(confetti, other.gameObject.transform.position, gameObject.transform.rotation);
+            aSource.PlayOneShot(ohno);
             Invoke("DeathScreen", 1);
             Invoke("Return", 4);
         }

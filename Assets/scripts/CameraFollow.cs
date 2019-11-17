@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    public GameObject interactsymbol;
 
     public GameObject Player;
     public float height;
@@ -31,7 +32,7 @@ public class CameraFollow : MonoBehaviour
         }
 
 
-
+        interactsymbol.transform.position = Player.transform.position;
 
     }
 }
