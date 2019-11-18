@@ -8,6 +8,7 @@ TagManager:
   - Fire
   - Interactable
   - camBarrier
+  - Pickup
   layers:
   - Default
   - TransparentFX
