@@ -81,13 +81,14 @@ public class Collectable : MonoBehaviour
     {
         if (col.transform.tag == "collectable") //if you collide with a collectable
         {
+            //print("did it get this far in the code?");
+            pickupAduioSource.PlayOneShot(pickupClip);
             Destroy(col.gameObject); //destroy object
             ++collectableCount; //add 1 to the collectable counter
             collectableCountText.text = "Items Collected: " + collectableCount + "/3";
 
-            print("did it get this far in the code?");
-            pickupAduioSource.PlayOneShot(pickupClip);
+            
 
-		}
+        }
     }
 }
