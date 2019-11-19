@@ -20,11 +20,20 @@ public class TestingBrightness : MonoBehaviour
 
 	void Update()
 	{
-		lightMain.intensity = mainSlider.value;
-		lightMenu.intensity = mainSlider.value;
+		//lightValue = mainSlider.value;
+		//lightMain.intensity = lightValue;
+		//lightMenu.intensity = lightValue;
+
+		//lightMain.intensity = newIntensity;
+		//lightMenu.intensity = newIntensity;
+
 	}
 
+	public void LightIntensity(float newIntensity)
+	{
+		newIntensity = lightValue;
 
+	}
 
 
 }
