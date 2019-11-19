@@ -4676,6 +4676,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aacca3570e938734692f2deef158c970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UniversalAudioSource: {fileID: 1751456073}
+  ClimbingClip: {fileID: 8300000, guid: eb06c8d4670b0084eab4b4bbde9b5b03, type: 3}
   climbSpeed: 0.1
 --- !u!65 &454356429
 BoxCollider:
@@ -14019,6 +14021,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aacca3570e938734692f2deef158c970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UniversalAudioSource: {fileID: 1751456073}
+  ClimbingClip: {fileID: 8300000, guid: eb06c8d4670b0084eab4b4bbde9b5b03, type: 3}
   climbSpeed: 0.1
 --- !u!65 &818014960
 BoxCollider:
@@ -17353,6 +17357,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 834357598}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: a0e842319ecc72547b90ad2818b149f7,
+        type: 3}
+      propertyPath: m_Name
+      value: Vine Fence
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: a0e842319ecc72547b90ad2818b149f7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -5975033157549033438, guid: a0e842319ecc72547b90ad2818b149f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17453,16 +17467,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 836f99be84d32464185edb0972730a3d, type: 2}
-    - target: {fileID: -927199367670048503, guid: a0e842319ecc72547b90ad2818b149f7,
-        type: 3}
-      propertyPath: m_Name
-      value: Vine Fence
-      objectReference: {fileID: 0}
-    - target: {fileID: 2534866581884222612, guid: a0e842319ecc72547b90ad2818b149f7,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0e842319ecc72547b90ad2818b149f7, type: 3}
 --- !u!1 &1239195080 stripped
@@ -23973,6 +23977,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8655343867566138489, guid: 1e022801b74a9b04f883fbf95dcd235c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -122.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655343867566138489, guid: 1e022801b74a9b04f883fbf95dcd235c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655343867566138489, guid: 1e022801b74a9b04f883fbf95dcd235c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 170.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655343867566138489, guid: 1e022801b74a9b04f883fbf95dcd235c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 331.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3255395266113399339, guid: 1e022801b74a9b04f883fbf95dcd235c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24087,26 +24111,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8655343867566138489, guid: 1e022801b74a9b04f883fbf95dcd235c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -122.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8655343867566138489, guid: 1e022801b74a9b04f883fbf95dcd235c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 225
-      objectReference: {fileID: 0}
-    - target: {fileID: 8655343867566138489, guid: 1e022801b74a9b04f883fbf95dcd235c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 170.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8655343867566138489, guid: 1e022801b74a9b04f883fbf95dcd235c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 331.3
       objectReference: {fileID: 0}
     - target: {fileID: 3828927533576118867, guid: 1e022801b74a9b04f883fbf95dcd235c,
         type: 3}
@@ -27502,7 +27506,7 @@ GameObject:
   - component: {fileID: 1751456074}
   - component: {fileID: 1751456073}
   m_Layer: 0
-  m_Name: PickupSound
+  m_Name: UniversalAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27963,6 +27967,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aacca3570e938734692f2deef158c970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UniversalAudioSource: {fileID: 1751456073}
+  ClimbingClip: {fileID: 8300000, guid: eb06c8d4670b0084eab4b4bbde9b5b03, type: 3}
   climbSpeed: 0.1
 --- !u!65 &1784142571
 BoxCollider:

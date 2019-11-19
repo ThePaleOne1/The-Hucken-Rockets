@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Climbable : MonoBehaviour
 {
+    public AudioSource UniversalAudioSource;
+    public AudioClip ClimbingClip;
+
     [SerializeField] 
     float climbSpeed = 0.1f;
 
-
+    bool isPlayingAudio = false;
     void Start()
     {
 
@@ -26,13 +29,31 @@ public class Climbable : MonoBehaviour
         if (!(other.gameObject.tag == "Player"))
             return;
 
+        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            if (!isPlayingAudio)
+            {
+                UniversalAudioSource.PlayOneShot(ClimbingClip);
+                UniversalAudioSource.loop = true;
+                isPlayingAudio = true;
+                Invoke("ToggleClimbSound", 0.5f);
+
+            }
+
+
+            
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
+            //UniversalAudioSource.PlayOneShot(ClimbingClip);
+            //UniversalAudioSource.loop = true;
             other.GetComponent<RigidbodyCharacter>().isClimbing = !other.GetComponent<RigidbodyCharacter>().isClimbing;
         }
 
         if (other.GetComponent<RigidbodyCharacter>().isClimbing)
         {
+            
             other.attachedRigidbody.useGravity = false;
 
             float y;
@@ -72,5 +93,10 @@ public class Climbable : MonoBehaviour
             other.GetComponent<RigidbodyCharacter>().isClimbing = false;
             other.attachedRigidbody.useGravity = true;
         }
+    }
+
+    void ToggleClimbSound()
+    {
+        isPlayingAudio = false;
     }
 }
