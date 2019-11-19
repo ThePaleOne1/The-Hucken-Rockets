@@ -49,6 +49,28 @@ public class Collectable : MonoBehaviour
         //{
             headItems[collectableCount - 1].SetActive(true);
         //}
+
+
+
+
+
+
+
+        if (Scissors == null)
+        {
+            print("scissors");
+            ScissorsUI.SetActive(true);
+        }
+        if (Tape == null)
+        {
+            print("tape");
+            TapeUI.SetActive(true);
+        }
+        if (EmptyBox == null)
+        {
+            print("box");
+            EmptyBoxUI.SetActive(true);
+        }
     }
         
 
@@ -59,18 +81,21 @@ public class Collectable : MonoBehaviour
             Destroy(col.gameObject); //destroy object
             ++collectableCount; //add 1 to the collectable counter
             collectableCountText.text = "Items Collected: " + collectableCount + "/3";
-			if (col.gameObject == Scissors)
-			{
-				ScissorsUI.SetActive(true);
-			}
-			if (col.gameObject == Tape)
-			{
-				TapeUI.SetActive(true);
-			}
-			if (col.gameObject == EmptyBox)
-			{
-				EmptyBoxUI.SetActive(true);
-			}
+			//if (col.gameObject == Scissors)
+			//{
+   //             print("scissors");
+			//	ScissorsUI.SetActive(true);
+			//}
+			//if (col.gameObject == Tape)
+			//{
+   //             print("tape");
+			//	TapeUI.SetActive(true);
+			//}
+			//if (col.gameObject == EmptyBox)
+			//{
+   //             print("box");
+			//	EmptyBoxUI.SetActive(true);
+			//}
 		}
     }
 }

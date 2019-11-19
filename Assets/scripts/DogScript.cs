@@ -12,6 +12,7 @@ public class DogScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Anim.SetBool("Walk", false);
         //rb = GetComponent<Rigidbody>();
     }
 
@@ -21,12 +22,13 @@ public class DogScript : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         // if(rb.velocity != new Vector3(0,0,0))
         {
-            //Anim.SetBool("Walk", true);
-            Anim.SetInteger("Walk", 1);
+            Anim.SetBool("Walk", true);
+            //Anim.SetInteger("Walk", 1);
         }
         else
         {
-            Anim.SetInteger("Walk", 0);
+            Anim.SetBool("Walk", false);
+            //Anim.SetInteger("Walk", 0);
 
         }
 

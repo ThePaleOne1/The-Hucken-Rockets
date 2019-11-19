@@ -23,7 +23,7 @@ public class MainCamSwitch : MonoBehaviour
         Invoke("Skippable", 2f);
         pInput.IsInputEnabled = false;
         //textPrompt.SetActive(false);
-        textPrompt.active = false;
+        textPrompt.SetActive(false);
     }
 
     // Update is called once per frame

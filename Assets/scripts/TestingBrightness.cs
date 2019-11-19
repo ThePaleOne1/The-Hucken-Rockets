@@ -9,9 +9,13 @@ public class TestingBrightness : MonoBehaviour
 
 	//public Rect SliderLocation;
 
-	//public Slider mainSlider; 
+	public Slider mainSlider;
+    float rbgValue = 0.5f;
+    void Update()
+    {
+        rbgValue = mainSlider.value;
+    }
 
-	//void Update()
 	//{
 	//	RenderSettings.ambientLight = new Color(GammaCorrection, GammaCorrection, GammaCorrection, 1.0f);
 
@@ -61,7 +65,7 @@ public class TestingBrightness : MonoBehaviour
 
 	} */
 
-	float rbgValue = 0.5f;
+	
 
 	void OnGUI()
 	{

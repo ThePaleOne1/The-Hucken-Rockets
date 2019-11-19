@@ -8,15 +8,16 @@ public class Buttonds : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 {
     public AudioClip hover;
     public AudioClip clicked;
-    public AudioSource audio;
+    public AudioSource audioSource;
     public void OnPointerEnter(PointerEventData ped)
     {
-        audio.PlayOneShot(hover);
+        audioSource.PlayOneShot(hover);
     }
 
     public void OnPointerDown(PointerEventData ped)
     {
-        audio.PlayOneShot(clicked);
+        audioSource.PlayOneShot(clicked);
     }
 
+    
 }
