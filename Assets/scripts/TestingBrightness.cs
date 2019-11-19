@@ -5,16 +5,19 @@ using UnityEngine.UI;
 
 public class TestingBrightness : MonoBehaviour
 {
+
+	public Slider mainSlider;
+
 	//public float GammaCorrection;
 
 	//public Rect SliderLocation;
 
-	public Slider mainSlider;
-    float rbgValue = 0.5f;
-    void Update()
-    {
-        rbgValue = mainSlider.value;
-    }
+	//public Slider mainSlider;
+	//   float rbgValue = 0.5f;
+	//   void Update()
+	//   {
+	//       rbgValue = mainSlider.value;
+	//   }
 
 	//{
 	//	RenderSettings.ambientLight = new Color(GammaCorrection, GammaCorrection, GammaCorrection, 1.0f);
@@ -65,15 +68,14 @@ public class TestingBrightness : MonoBehaviour
 
 	} */
 
-	
 
-	void OnGUI()
-	{
 
-		rbgValue = GUI.HorizontalSlider(new Rect (Screen.width/2 - 50, 90, 100, 30), rbgValue, 0f, 1.0f);
-		RenderSettings.ambientLight = new Color(rbgValue, rbgValue, rbgValue, 1);
+	//void OnGUI()
+	//{
 
-	}
+	//	rbgValue = GUI.HorizontalSlider(new Rect (Screen.width/2 - 50, 90, 100, 30), rbgValue, 0f, 1.0f);
+	//	RenderSettings.ambientLight = new Color(rbgValue, rbgValue, rbgValue, 1);
 
+	//}
 
 }
