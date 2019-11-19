@@ -17,6 +17,9 @@ public class Collectable : MonoBehaviour
 	public GameObject EmptyBox;
 	public GameObject EmptyBoxUI;
 
+    public AudioSource pickupAduioSource;
+    public AudioClip pickupClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,17 +61,17 @@ public class Collectable : MonoBehaviour
 
         if (Scissors == null)
         {
-            print("scissors");
+            //print("scissors");
             ScissorsUI.SetActive(true);
         }
         if (Tape == null)
         {
-            print("tape");
+            //print("tape");
             TapeUI.SetActive(true);
         }
         if (EmptyBox == null)
         {
-            print("box");
+           //print("box");
             EmptyBoxUI.SetActive(true);
         }
     }
@@ -81,21 +84,10 @@ public class Collectable : MonoBehaviour
             Destroy(col.gameObject); //destroy object
             ++collectableCount; //add 1 to the collectable counter
             collectableCountText.text = "Items Collected: " + collectableCount + "/3";
-			//if (col.gameObject == Scissors)
-			//{
-   //             print("scissors");
-			//	ScissorsUI.SetActive(true);
-			//}
-			//if (col.gameObject == Tape)
-			//{
-   //             print("tape");
-			//	TapeUI.SetActive(true);
-			//}
-			//if (col.gameObject == EmptyBox)
-			//{
-   //             print("box");
-			//	EmptyBoxUI.SetActive(true);
-			//}
+
+            print("did it get this far in the code?");
+            pickupAduioSource.PlayOneShot(pickupClip);
+
 		}
     }
 }
