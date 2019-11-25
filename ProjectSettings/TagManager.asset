@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - camBarrier
   - Pickup
+  - Climbable
   layers:
   - Default
   - TransparentFX
