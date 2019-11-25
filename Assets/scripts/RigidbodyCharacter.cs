@@ -22,6 +22,8 @@ public class RigidbodyCharacter : MonoBehaviour
 
     public bool IsInputEnabled = true;
 
+    public GameObject climbableObj;
+
 
 	void Start()
 	{
@@ -31,6 +33,8 @@ public class RigidbodyCharacter : MonoBehaviour
 
 	void Update()
 	{
+        
+
         //print("Climbing: " + isClimbing);
         if (!IsInputEnabled)
         {
@@ -42,7 +46,7 @@ public class RigidbodyCharacter : MonoBehaviour
         //print(_groundChecker.GetComponent<NavMeshAgent>().isOnNavMesh);
 
 		_inputs = Vector3.zero;
-		_inputs.x = Input.GetAxis("Horizontal");
+        _inputs.x = Input.GetAxis("Horizontal");
 		_inputs.z = Input.GetAxis("Vertical");
 		if (_inputs != Vector3.zero)
 		{
@@ -53,10 +57,16 @@ public class RigidbodyCharacter : MonoBehaviour
 			_body.AddForce(Vector3.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
 		}
         //if (Input.GetButtonDown("Dash"))
-		//{
-		//	Vector3 dashVelocity = Vector3.Scale(transform.forward, DashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * _body.drag + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * _body.drag + 1)) / -Time.deltaTime)));
-		//	_body.AddForce(dashVelocity, ForceMode.VelocityChange);
-		//}
+        //{
+        //	Vector3 dashVelocity = Vector3.Scale(transform.forward, DashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * _body.drag + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * _body.drag + 1)) / -Time.deltaTime)));
+        //	_body.AddForce(dashVelocity, ForceMode.VelocityChange);
+        //}
+
+        if (isClimbing)
+        {
+            Vector3 targetPosition = new Vector3(climbableObj.transform.position.x, transform.position.y, climbableObj.transform.position.z);
+            transform.LookAt(targetPosition);
+        }
 
     }
 

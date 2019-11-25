@@ -11,6 +11,8 @@ public class Climbable : MonoBehaviour
     float climbSpeed = 0.1f;
 
     bool isPlayingAudio = false;
+
+    public GameObject[] teleports;
     void Start()
     {
 
@@ -22,7 +24,8 @@ public class Climbable : MonoBehaviour
 
     }
 
-
+    GameObject winingObj;
+    float DistanceToBeat;
 
     void OnTriggerStay(Collider other)
     {
@@ -49,22 +52,40 @@ public class Climbable : MonoBehaviour
             //UniversalAudioSource.PlayOneShot(ClimbingClip);
             //UniversalAudioSource.loop = true;
             other.GetComponent<RigidbodyCharacter>().isClimbing = !other.GetComponent<RigidbodyCharacter>().isClimbing;
+            if (other.GetComponent<RigidbodyCharacter>().isClimbing)
+            {
+                
+                for (int i = 0; i < teleports.Length; ++i)
+                {
+                    if (DistanceToBeat < Vector3.Distance(other.gameObject.transform.position, teleports[i].transform.position))
+                    {
+                        DistanceToBeat = Vector3.Distance(other.gameObject.transform.position, teleports[i].transform.position);
+                        winingObj = teleports[i].gameObject;
+                    }
+                    
+                }
+
+                other.transform.position = winingObj.transform.position;
+            }
         }
 
         if (other.GetComponent<RigidbodyCharacter>().isClimbing)
         {
+            other.gameObject.GetComponent<RigidbodyCharacter>().climbableObj = gameObject;
             
+
+
             other.attachedRigidbody.useGravity = false;
 
             float y;
             if (Input.GetAxis("Vertical") != 0)
             {
-                y = Mathf.Abs(Input.GetAxis("Vertical") * climbSpeed);
+                y = Input.GetAxis("Vertical") * climbSpeed;
             }
-            else if (Input.GetAxis("Horizontal") != 0)
-            {
-                y = Mathf.Abs(Input.GetAxis("Horizontal") * climbSpeed);
-            }
+            //else if (Input.GetAxis("Horizontal") != 0)
+            //{
+            //    y = Mathf.Abs(Input.GetAxis("Horizontal") * climbSpeed);
+            //}
             else
             {
                 y = -climbSpeed;
