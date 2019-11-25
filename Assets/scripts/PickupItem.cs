@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
+    GameObject physicsObject;
     GameObject heldObject;
     public bool isHolding = false;
+    public GameObject pickupZone;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,35 +17,43 @@ public class PickupItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (isHolding && Input.GetKey(KeyCode.Q))
+        //if (isHolding)
         //{
-        //    isHolding = false;
+        //    heldObject.transform.SetPositionAndRotation(transform.position, transform.rotation);
         //}
-
-        if (isHolding)
-        {
-            heldObject.transform.position = transform.position;
-            heldObject.GetComponent<Rigidbody>().detectCollisions = false;
-            heldObject.GetComponent<Rigidbody>().isKinematic = false;
-        }
-        else
-        {
-            heldObject.GetComponent<Rigidbody>().detectCollisions = true;
-            heldObject.GetComponent<Rigidbody>().isKinematic = true;
-            heldObject = null;
-        }
     }
 
     private void OnTriggerStay(Collider col)
     {
-   
-        if (col.gameObject.tag == "Pickup" && Input.GetKeyDown(KeyCode.Q))
+        if (col.transform.tag == "Pickup" && Input.GetKeyDown(KeyCode.E))
         {
-            print("you can pick up the box");
-            isHolding = true;
-            heldObject = col.gameObject;
-            //col.gameObject.transform.position = transform.position;
+            if (!isHolding)
+            {
+                //if (col.gameObject.GetComponent<HeldObjectVariable>() != null)
+                //{
+                physicsObject = col.gameObject.GetComponent<HeldObjectVariable>().physicsObj;
+                heldObject = col.gameObject.GetComponent<HeldObjectVariable>().heldObj;
+                //}
+                
+                isHolding = true;
+
+                Destroy(col.gameObject);
+                Instantiate(heldObject, transform.position, transform.rotation);
+                heldObject.GetComponent<HeldObjectFollowPlayer>().pickupZone = gameObject;
+                //col.transform.SetParent(transform);
+            }
+            else
+            {
+                isHolding = false;
+                print("does is get to this section???");
+                Destroy(col.gameObject);
+                print("i assume its not getting to this point");
+                Instantiate(physicsObject, transform.position, transform.rotation);
+                print("what about this line????");
+            }
+            
         }
+       
 
         
     }
