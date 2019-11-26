@@ -13,9 +13,11 @@ public class Climbable : MonoBehaviour
     bool isPlayingAudio = false;
 
     public GameObject[] teleports;
+    GameObject winingObj;
+    float DistanceToBeat;
     void Start()
     {
-
+        DistanceToBeat = 0f;
     }
 
 
@@ -24,8 +26,7 @@ public class Climbable : MonoBehaviour
 
     }
 
-    GameObject winingObj;
-    float DistanceToBeat;
+    
 
     void OnTriggerStay(Collider other)
     {
@@ -52,27 +53,27 @@ public class Climbable : MonoBehaviour
             //UniversalAudioSource.PlayOneShot(ClimbingClip);
             //UniversalAudioSource.loop = true;
             other.GetComponent<RigidbodyCharacter>().isClimbing = !other.GetComponent<RigidbodyCharacter>().isClimbing;
-            if (other.GetComponent<RigidbodyCharacter>().isClimbing)
-            {
+            //if (other.GetComponent<RigidbodyCharacter>().isClimbing)
+            //{
                 
-                for (int i = 0; i < teleports.Length; ++i)
-                {
-                    if (DistanceToBeat < Vector3.Distance(other.gameObject.transform.position, teleports[i].transform.position))
-                    {
-                        DistanceToBeat = Vector3.Distance(other.gameObject.transform.position, teleports[i].transform.position);
-                        winingObj = teleports[i].gameObject;
-                    }
+            //    for (int i = 0; i < teleports.Length; ++i)
+            //    {
+            //        if (DistanceToBeat < Vector3.Distance(other.gameObject.transform.position, teleports[i].transform.position))
+            //        {
+            //            DistanceToBeat = Vector3.Distance(other.gameObject.transform.position, teleports[i].transform.position);
+            //            winingObj = teleports[i].gameObject;
+            //        }
                     
-                }
+            //    }
 
-                other.transform.position = winingObj.transform.position;
-            }
+            //    other.transform.position = winingObj.transform.position;
+            //}
         }
 
         if (other.GetComponent<RigidbodyCharacter>().isClimbing)
         {
             other.gameObject.GetComponent<RigidbodyCharacter>().climbableObj = gameObject;
-            
+
 
 
             other.attachedRigidbody.useGravity = false;
@@ -88,7 +89,7 @@ public class Climbable : MonoBehaviour
             //}
             else
             {
-                y = -climbSpeed;
+                y = 0f;
             }
 
             other.transform.Translate(new Vector3(0, y, 0));

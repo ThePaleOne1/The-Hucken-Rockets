@@ -34,12 +34,12 @@ public class PickupItem : MonoBehaviour
                 physicsObject = col.gameObject.GetComponent<HeldObjectVariable>().physicsObj;
                 heldObject = col.gameObject.GetComponent<HeldObjectVariable>().heldObj;
                 //}
-                
+                heldObject.GetComponent<HeldObjectFollowPlayer>().pickupZone = gameObject;
                 isHolding = true;
 
                 Destroy(col.gameObject);
                 Instantiate(heldObject, transform.position, transform.rotation);
-                heldObject.GetComponent<HeldObjectFollowPlayer>().pickupZone = gameObject;
+                
                 //col.transform.SetParent(transform);
             }
             else
