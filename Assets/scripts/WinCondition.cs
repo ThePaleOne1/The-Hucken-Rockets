@@ -14,7 +14,7 @@ public class WinCondition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (col.collectableCount == col.colectOrder.Length-1  && other.tag == "Player")
+        if (col.collectableCount == 3  && other.tag == "Player")
         {
             winObject.SetActive(true);
         }
