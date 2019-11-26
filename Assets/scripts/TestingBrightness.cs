@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TestingBrightness : MonoBehaviour
 {
-
+	/*
 	public Light lightMain;
 	public Light lightMenu;
 	public float lightValue;
@@ -34,6 +34,15 @@ public class TestingBrightness : MonoBehaviour
 		newIntensity = lightValue;
 
 	}
+	*/
 
+	public Slider mainSlider;
+	public static float lightValue;
+	public Light myLight;
 
+	public void Update()
+	{
+		lightValue = mainSlider.value;
+		myLight.intensity = lightValue;
+	}
 }
