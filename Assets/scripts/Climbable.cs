@@ -48,7 +48,7 @@ public class Climbable : MonoBehaviour
             
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
             //UniversalAudioSource.PlayOneShot(ClimbingClip);
             //UniversalAudioSource.loop = true;
@@ -83,10 +83,10 @@ public class Climbable : MonoBehaviour
             {
                 y = Input.GetAxis("Vertical") * climbSpeed;
             }
-            //else if (Input.GetAxis("Horizontal") != 0)
-            //{
-            //    y = Mathf.Abs(Input.GetAxis("Horizontal") * climbSpeed);
-            //}
+            else if (Input.GetAxis("Horizontal") != 0)
+            {
+                y = (Input.GetAxis("Horizontal") * climbSpeed);
+            }
             else
             {
                 y = 0f;

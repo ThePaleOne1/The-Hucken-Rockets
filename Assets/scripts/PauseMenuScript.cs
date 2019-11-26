@@ -8,7 +8,7 @@ public class PauseMenuScript : MonoBehaviour
 {
 	public bool paused = false;
 	public GameObject UI;
-
+    bool isReset = false;
 
     // Start is called before the first frame update
     void Start()
@@ -44,11 +44,21 @@ public class PauseMenuScript : MonoBehaviour
 		Time.timeScale = 1;
 		UI.SetActive(false);
 		paused = false;
+        
 	}
 
 	public void ReturnToMenu()
 	{
 		SceneManager.LoadScene("MenuScene");
 		paused = false;
-	}
+        
+    }
+
+    public void RestartGame()
+    {
+       
+        Application.LoadLevel(Application.loadedLevel);
+        Time.timeScale = 1;
+        
+    }
 }
