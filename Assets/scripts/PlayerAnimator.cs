@@ -35,16 +35,16 @@ public class PlayerAnimator : MonoBehaviour
             Anim.SetBool("Is Jumping", false);
         }
 
-        if (Input.GetKey(KeyCode.E))
-        {
-            Anim.SetBool("Is Pushing", true);
-            //print("E is pushed");
-        }
-        else
-        {
-            Anim.SetBool("Is Pushing", false);
-            //print("E end pushed");
-        }
+        //if (Input.GetKey(KeyCode.E))
+        //{
+        //    Anim.SetBool("Is Pushing", true);
+        //    //print("E is pushed");
+        //}
+        //else
+        //{
+        //    Anim.SetBool("Is Pushing", false);
+        //    //print("E end pushed");
+        //}
 
         if (Anim.GetBool("Is Climbing"))
         {
