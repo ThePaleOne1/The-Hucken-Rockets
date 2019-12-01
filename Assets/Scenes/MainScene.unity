@@ -12117,6 +12117,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: shed window wall
       objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: 8a9c5d6d35e435143a95ca40c5dfe4fb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8a9c5d6d35e435143a95ca40c5dfe4fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12192,11 +12197,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 648c4ad4fd1ad9143a81fb28f7e56cd5, type: 2}
-    - target: {fileID: 2534866581884222612, guid: 8a9c5d6d35e435143a95ca40c5dfe4fb,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a9c5d6d35e435143a95ca40c5dfe4fb, type: 3}
 --- !u!1 &648423759
@@ -23946,7 +23946,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh428060
+  m_Name: pb_Mesh23092
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46260,37 +46260,37 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 213.09
+      value: 210.4
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -37
+      value: -37.92
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 49.2
+      value: 48.04
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.21093644
+      value: 0.19040488
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.67491174
+      value: 0.7537272
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.21093644
+      value: 0.22978377
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.67491174
+      value: -0.585526
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
@@ -46300,22 +46300,22 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -34.712
+      value: -34.706
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.00001
+      value: 255.29199
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2940a674d3cc62c4cb2a6f43645ac71c,
         type: 3}
@@ -49903,6 +49903,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trellis Vines
       objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: 8abe9e6e1272a154fb34022286e60d22,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8abe9e6e1272a154fb34022286e60d22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -49978,11 +49983,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3dc303413d4245e49b259f980ddf0776, type: 2}
-    - target: {fileID: 2534866581884222612, guid: 8abe9e6e1272a154fb34022286e60d22,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8abe9e6e1272a154fb34022286e60d22, type: 3}
 --- !u!1 &1765293499
