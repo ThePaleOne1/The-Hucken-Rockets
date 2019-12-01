@@ -8,6 +8,8 @@ public class InteractPush : MonoBehaviour
     public AudioSource audioS;
     public AudioClip chairPush;
     public GameObject sparkles;
+
+
     //public Animator pAnim;
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,8 @@ public class InteractPush : MonoBehaviour
             anim.SetBool("isPushed", true);
             audioS.PlayOneShot(chairPush);
             Destroy(sparkles);
+
+            Invoke("ChangeTags",0);
             //pAnim.SetBool("Is Pushing", true);
         }
         
@@ -42,7 +46,10 @@ public class InteractPush : MonoBehaviour
     //}
 
 
-
+    private void ChangeTags()
+    {
+        tag = "nonInteract";
+    }
 
 
 }

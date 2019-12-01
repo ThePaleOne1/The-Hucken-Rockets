@@ -21,7 +21,7 @@ public class InteractableHighlight : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Interactable")
+        if (other.tag == "Interactable" || other.tag == "Pickup")
         {
             //originalMat = other.GetComponent<Material>();
             //other.GetComponent<Material>().CopyPropertiesFromMaterial(intMat);
@@ -31,7 +31,7 @@ public class InteractableHighlight : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Interactable")
+        if (other.tag == "Interactable" || other.tag == "Pickup")
         {
             other.GetComponent<Renderer>().material = originalMat;
             //other.GetComponent<Material>().CopyPropertiesFromMaterial(originalMat);

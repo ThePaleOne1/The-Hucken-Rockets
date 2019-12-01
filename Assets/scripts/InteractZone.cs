@@ -21,7 +21,7 @@ public class InteractZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Interactable")
+        if (other.tag == "Interactable" || other.tag == "Pickup")
         {
             symbol.SetActive(true);
         }
@@ -37,7 +37,7 @@ public class InteractZone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Interactable")
+        if (other.tag == "Interactable" || other.tag == "Pickup")
         {
             symbol.SetActive(false);
         }
