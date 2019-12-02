@@ -24,6 +24,9 @@ public class RigidbodyCharacter : MonoBehaviour
 
     public GameObject climbableObj;
 
+    bool isPlayingAudio = false;
+    public AudioSource UniversalAudioSource;
+    public AudioClip walkClip;
 
 	void Start()
 	{
@@ -50,7 +53,19 @@ public class RigidbodyCharacter : MonoBehaviour
 		_inputs.z = Input.GetAxis("Vertical");
 		if (_inputs != Vector3.zero)
 		{
-			transform.forward = _inputs;
+            if (_isGrounded) {
+                if (!isPlayingAudio)
+                {
+                    UniversalAudioSource.PlayOneShot(walkClip);
+                    isPlayingAudio = true;
+                    Invoke("ToggleWalkSound", 0.4f);
+
+                }
+            }
+
+
+
+            transform.forward = _inputs;
 		}
 		if (Input.GetButtonDown("Jump") && _isGrounded)
 		{
@@ -75,4 +90,10 @@ public class RigidbodyCharacter : MonoBehaviour
 	{
 		_body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
 	}
+
+
+    void ToggleWalkSound()
+    {
+        isPlayingAudio = false;
+    }
 }
