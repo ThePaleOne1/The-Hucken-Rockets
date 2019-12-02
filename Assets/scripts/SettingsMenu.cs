@@ -2,25 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    //public float gammaCorrection;
+	public Slider mainSlider;
+	public float newVolume;
+	public static float resetVolume;
 
-    //public Rect SliderLocation;
+	public void Start()
+	{
+		if (TestingBrightness.Started == true)
+		{
+			mainSlider.value = resetVolume;
+		}
+	}
 
-    //public void Update()
-    //{
-    //    RenderSettings.ambientLight = new Color(gammaCorrection, gammaCorrection, gammaCorrection, 1.0f);
-    //}
+	public void Update()
+	{
+		newVolume = mainSlider.value;
+		AudioListener.volume = newVolume;
+		resetVolume = mainSlider.value;
+	}
 
-    //public void OnGUI()
-    //{
-    //    gammaCorrection = GUI.HorizontalSlider(SliderLocation, gammaCorrection, 0, 1.0f);
-    //}
-
-    public void AdjustVolume(float newVolume)
-    {
-        AudioListener.volume = newVolume;
-    }
 }

@@ -21,7 +21,7 @@ public class QuitMainMenu : MonoBehaviour
 	public void QuitGame()
 	{
 		Anim.SetBool("Quit", true);
-		Invoke( "End", 3);
+		Invoke( "End", 1.5f);
 	}
 
 	void End()

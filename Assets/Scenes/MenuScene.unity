@@ -1581,6 +1581,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1773760609}
+        m_MethodName: StartedYes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1773760607}
+        m_MethodName: ReturnedtoMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1007798349
@@ -2670,6 +2692,7 @@ GameObject:
   - component: {fileID: 1773760602}
   - component: {fileID: 1773760607}
   - component: {fileID: 1773760608}
+  - component: {fileID: 1773760609}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2790,6 +2813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8eb370fdc8969c4ca1a9a9a63466027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainSlider: {fileID: 2004180160}
+  newVolume: 0
 --- !u!114 &1773760608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2802,6 +2827,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28153b7fa3daaa4abd6605808d0830c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1773760609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773760601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a54a24e54661a954caeb300213cc6231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSlider: {fileID: 2005562053}
+  myLight: {fileID: 0}
 --- !u!1 &1775871635
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,6 +3283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004180158}
   - component: {fileID: 2004180160}
+  - component: {fileID: 2004180159}
   m_Layer: 5
   m_Name: Volume slider
   m_TagString: Untagged
@@ -3274,6 +3314,20 @@ RectTransform:
   m_AnchoredPosition: {x: -50.15, y: -35.35}
   m_SizeDelta: {x: 89.37, y: 30.14}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2004180159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004180157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8eb370fdc8969c4ca1a9a9a63466027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSlider: {fileID: 2004180160}
+  newVolume: 0
 --- !u!114 &2004180160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3325,8 +3379,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1773760607}
-        m_MethodName: AdjustVolume
-        m_Mode: 0
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

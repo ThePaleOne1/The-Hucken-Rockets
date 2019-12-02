@@ -40,9 +40,24 @@ public class TestingBrightness : MonoBehaviour
 	public static float lightValue;
 	public Light myLight;
 
+	public static bool Started = false;
+
+	public void Start()
+	{
+		if (Started == true)
+		{
+			mainSlider.value = lightValue;
+		}
+	}
+
 	public void Update()
 	{
 		lightValue = mainSlider.value;
 		myLight.intensity = lightValue;
+	}
+
+	public void StartedYes()
+	{
+		Started = true;
 	}
 }
