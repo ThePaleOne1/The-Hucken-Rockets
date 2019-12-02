@@ -10556,7 +10556,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 17.008001, y: 0, z: 0}
 --- !u!114 &618550108
 MonoBehaviour:
@@ -10570,7 +10570,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246558f9f5e1176418a91ed780088ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactsymbol: {fileID: 0}
   Player: {fileID: 170200154}
+  height: 0
+  distance: 0
+  frontBarrier: {fileID: 0}
 --- !u!1 &633106417
 GameObject:
   m_ObjectHideFlags: 0
@@ -17594,7 +17598,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929535115}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.852646, y: 19.017149, z: -30.579855}
+  m_LocalPosition: {x: -37.8, y: 19.017149, z: -30.579855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2108396351}
@@ -31164,7 +31168,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23514
+  m_Name: pb_Mesh21848
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
