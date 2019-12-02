@@ -403,15 +403,15 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: mixamo.com
   - m_Version: 1
-    m_Start: 18.283333333333335
-    m_ClipIn: 1.0666666666666664
+    m_Start: 17.833333333333325
+    m_ClipIn: 0.8166666666666664
     m_Asset: {fileID: -7091362252351885712}
-    m_Duration: 0.20000000000000995
+    m_Duration: 0.45000000000000995
     m_TimeScale: 1
     m_ParentTrack: {fileID: -7105728920950998601}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.06666666666666643
+    m_BlendInDuration: 0.20000000000000995
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -475,13 +475,13 @@ MonoBehaviour:
     m_Start: 16.533333333333335
     m_ClipIn: 0
     m_Asset: {fileID: 4111873856465941075}
-    m_Duration: 1.8166666666666664
+    m_Duration: 1.5
     m_TimeScale: 1
     m_ParentTrack: {fileID: -7105728920950998601}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: 0.1666666666666643
-    m_BlendOutDuration: 0.06666666666666643
+    m_BlendOutDuration: 0.20000000000000995
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -1795,7 +1795,7 @@ MonoBehaviour:
     m_Start: 10
     m_ClipIn: 0
     m_Asset: {fileID: 1940854847726238751}
-    m_Duration: 8.350000000000001
+    m_Duration: 8.066666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1126241118045735695}
     m_EaseInDuration: 0
@@ -2041,7 +2041,7 @@ MonoBehaviour:
     m_Start: 15.166666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 6492613158957932509}
-    m_Duration: 2.6333333333333346
+    m_Duration: 2.333333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: -911082645083672261}
     m_EaseInDuration: 0
@@ -2107,10 +2107,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM vcam4
   - m_Version: 1
-    m_Start: 17.8
+    m_Start: 17.5
     m_ClipIn: 0
     m_Asset: {fileID: 7293832813059291935}
-    m_Duration: 6.266666666666666
+    m_Duration: 6.566666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: -911082645083672261}
     m_EaseInDuration: 0
@@ -4099,7 +4099,25 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
