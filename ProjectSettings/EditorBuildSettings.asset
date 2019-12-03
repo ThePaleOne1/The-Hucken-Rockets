@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Lachlan'sTesting.unity
     guid: 5462aa73f37a9ca448601b2dc5341de6
+  - enabled: 1
+    path: Assets/Scenes/Second Cutscene.unity
+    guid: f8aa0af3122004c4ab63d6639ed4095e
   m_configObjects: {}

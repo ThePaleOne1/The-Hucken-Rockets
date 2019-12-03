@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class WinCondition : MonoBehaviour
 {
     public Collectable col;
@@ -16,7 +16,9 @@ public class WinCondition : MonoBehaviour
     {
         if (col.collectableCount == 3  && other.tag == "Player")
         {
-            winObject.SetActive(true);
+            SceneManager.LoadScene(3);
+
         }
+
     }
 }
