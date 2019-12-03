@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShrinusTeleporter : MonoBehaviour
 {
-
+	public GameObject ShrinusObjects;
 	public Transform Destination;
 
     // Start is called before the first frame update
@@ -24,6 +24,7 @@ public class ShrinusTeleporter : MonoBehaviour
 		if (other.transform.tag == "Player")
 		{
 			other.transform.position = Destination.transform.position;
+			ShrinusObjects.SetActive(false);
 		}
 	}
 
