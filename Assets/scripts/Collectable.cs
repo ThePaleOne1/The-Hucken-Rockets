@@ -20,6 +20,7 @@ public class Collectable : MonoBehaviour
     public AudioSource pickupAduioSource;
     public AudioClip pickupClip;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -42,10 +43,13 @@ public class Collectable : MonoBehaviour
         if (collectableCount == colectOrder.Length - 1)
         {
             cat.GetComponent<CatAgent>().isCatChasing = true;
+
+            
         }
         else
         {
             cat.GetComponent<CatAgent>().isCatChasing = false;
+            
         }
 
         //if (collectableCount > 0)

@@ -23,7 +23,11 @@ public class DogAgent : MonoBehaviour
     private float detectionRange = 3f;
 
     bool hasBarked = false;
-    
+
+    public AudioSource BGaudio;
+    public AudioClip calmBG;
+    public AudioClip chaseBG;
+
     void Start()
     {
         dogAgent = GetComponent<NavMeshAgent>();
@@ -44,10 +48,11 @@ public class DogAgent : MonoBehaviour
         if (Vector3.Distance(transform.position, Player.transform.position) < detectionRange)
         {
             dogAgent.destination = Player.transform.position; //walk towards the player specifically
-            
 
+            
             if (hasBarked == false)
             {
+                
                 hasBarked = true;
                 aSource.PlayOneShot(bark);
                 //Invoke("DoggoBark", Random.Range(3, 10));
@@ -61,10 +66,23 @@ public class DogAgent : MonoBehaviour
         if (Vector3.Distance(transform.position, Player.transform.position) > detectionRange)
         {
             hasBarked = false;
-
+            
 
         }
-        
+
+        if (Vector3.Distance(transform.position, Player.transform.position) == detectionRange)
+        {
+            if (hasBarked)
+            {
+                BGaudio.clip = calmBG;
+                BGaudio.Play();
+            }
+            else
+            {
+                BGaudio.clip = chaseBG;
+                BGaudio.Play();
+            }
+        }
 
     }
 
