@@ -6,6 +6,9 @@ public class HeldObjectVariable : MonoBehaviour
 {
     public GameObject heldObj;
     public GameObject physicsObj;
+
+    public AudioSource aSource;
+    public AudioClip CollideSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +19,10 @@ public class HeldObjectVariable : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        aSource.PlayOneShot(CollideSound);
     }
 }

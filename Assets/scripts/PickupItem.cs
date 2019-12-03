@@ -8,6 +8,9 @@ public class PickupItem : MonoBehaviour
     GameObject heldObject;
     public bool isHolding = false;
     public GameObject pickupZone;
+
+    public AudioSource aSource;
+    public AudioClip aClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +42,8 @@ public class PickupItem : MonoBehaviour
 
                 Destroy(col.gameObject);
                 Instantiate(heldObject, transform.position, transform.rotation);
-                
+
+                aSource.PlayOneShot(aClip);
                 //col.transform.SetParent(transform);
             }
             else
