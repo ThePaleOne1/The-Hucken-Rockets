@@ -17,7 +17,7 @@ public class DoorProgression : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (colScript.collectableCount == count)
+        if (colScript.collectableCount >= count)
         {
             anim.SetBool("isOpen", true);
         }
