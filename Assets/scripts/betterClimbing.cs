@@ -2,27 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This goes on any hit box that you want to make climbable.
+/// This should be seperate from the actual mesh of the climbable object.
+/// instead use a child object with just the trigger box for teh climable regions
+/// </summary>
 public class betterClimbing : MonoBehaviour
 {
 
-    bool isClimb;
+    
     public KeyCode[] inputkey;
     public float climbSpeed;
-    float y;
+    
     public AudioSource UniversalAudioSource;
     public AudioClip ClimbingClip;
     bool isPlayingAudio = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -38,7 +32,6 @@ public class betterClimbing : MonoBehaviour
                 UniversalAudioSource.PlayOneShot(ClimbingClip);
                 isPlayingAudio = true;
                 Invoke("ToggleClimbSound", 0.5f);
-
             }
 
         }
